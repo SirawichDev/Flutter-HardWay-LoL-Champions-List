@@ -9,6 +9,34 @@ class TopLaneList extends StatefulWidget {
 }
 
 class _TopLaneListState extends State<TopLaneList> {
+  ScrollController _scrollController;
+  List allDescribe = [
+    'There is no greater symbol of Noxian might than Darius  the nation`s most feared and battle-hardened leader. Rising from humble origins to become the Hand of Noxus',
+' those who stand against the commander of the Trifarian Legion can expect no mercy.',
+    'he cleaves through the empire`s enemies—many of them Noxi',
+  ];
+  String description;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(changeDesc);
+    setState(() {
+      description = allDescribe[0];
+    });
+  }
+
+  changeDesc() {
+    var value = _scrollController.offset.round();
+    var desIndex = (value / 150).round();
+    print(value);
+    setState(() {
+      description = allDescribe[desIndex];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -17,6 +45,7 @@ class _TopLaneListState extends State<TopLaneList> {
           height: 350.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
+            controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               fetchTopLaneCard(
@@ -30,8 +59,33 @@ class _TopLaneListState extends State<TopLaneList> {
                 width: 25.0,
               ),
               fetchTopLaneCard(
-                  'assets/darius3.png', '6300', 'Top Lane', 'Darius')
+                  'assets/darius3.png', '6300', 'Top Lane', 'Darius'),
+              SizedBox(
+                width: 25.0,
+              ),
             ],
+
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0, top: 10.0),
+          child: Text(
+            'Description',
+            style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 17.0,
+                color: Colors.black,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0, top: 10.0),
+          child: Text(
+            description,
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontFamily: 'Montserrat',
+                fontSize: 13.0),
           ),
         )
       ],
@@ -224,14 +278,12 @@ class _TopLaneListState extends State<TopLaneList> {
             child: Container(
               height: 50.0,
               width: 50.0,
-
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(25.0),
                       bottomRight: Radius.circular(25.0)),
                   color: Colors.black),
               child: Center(
-
                 child: Icon(
                   Icons.arrow_forward,
                   color: Colors.white,
