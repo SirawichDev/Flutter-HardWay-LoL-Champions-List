@@ -20,6 +20,16 @@ class _TopLaneListState extends State<TopLaneList> {
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               fetchTopLaneCard(
+                  'assets/darius3.png', '6300', 'Top Lane', 'Darius'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchTopLaneCard(
+                  'assets/darius3.png', '6300', 'Top Lane', 'Darius'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchTopLaneCard(
                   'assets/darius3.png', '6300', 'Top Lane', 'Darius')
             ],
           ),
@@ -49,7 +59,7 @@ class _TopLaneListState extends State<TopLaneList> {
                     Column(
                       children: <Widget>[
                         SizedBox(
-                          height: 10.0,
+                          height: 5.0,
                         ),
                         Text(
                           'From',
@@ -201,24 +211,33 @@ class _TopLaneListState extends State<TopLaneList> {
 //                                  style: BorderStyle.solid,
 //                                  width: .7),
 //                              borderRadius: BorderRadius.circular(5.0)),
-//                          child: ListView(
-//                            children: <Widget>[
-//                              Icon(
-//                                Icons.whatshot,
-//                                color: Colors.white,
-//                              ),
-//                              Icon(
-//                                Icons.verified_user,color: Colors.white,
-//                              )
-//                            ],
-//                          )),
+//                       ),
 //                    )
                   ],
                 )
               ],
             ),
           ),
-        )
+        ),
+        Padding(
+            padding: const EdgeInsets.only(left: 1.0),
+            child: Container(
+              height: 50.0,
+              width: 50.0,
+
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25.0),
+                      bottomRight: Radius.circular(25.0)),
+                  color: Colors.black),
+              child: Center(
+
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                ),
+              ),
+            ))
       ],
     );
   }
