@@ -54,10 +54,10 @@ class HomePageState extends State<Home> with SingleTickerProviderStateMixin {
           Padding(
             padding: const EdgeInsets.all(14.0),
             child: Text(
-              'Top Champions Pick',
+              'Top Champ Pick',
               style: TextStyle(
                   fontFamily: 'Montserrat',
-                  fontSize: 30.0,
+                  fontSize: 40.0,
                   fontWeight: FontWeight.w500),
             ),
           ),
