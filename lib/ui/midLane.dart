@@ -140,16 +140,54 @@ class _MidLaneListState extends State<MidLaneList> {
                       height: 30.0,
                       width: 30.0,
                       decoration: BoxDecoration(
+                          border: Border.all(
+                              color: Colors.black,
+                              style: BorderStyle.solid,
+                              width: .7),
+                          borderRadius: BorderRadius.circular(5.0),
+                          color: Colors.transparent),
+                      child: Icon(
+                        Icons.flash_on,
+                        color: Colors.black.withOpacity(.8),
+                        size: 20.0,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      height: 30.0,
+                      width: 30.0,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: Colors.black,
+                              style: BorderStyle.solid,
+                              width: .7),
+                      borderRadius: BorderRadius.circular(5.0),
+                      color: Colors.transparent),
+                      child: Icon(
+                        Icons.block,
+                        color: Colors.black.withOpacity(.8),
+                        size: 20.0,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      height: 30.0,
+                      width: 30.0,
+                      decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.black,
                           style: BorderStyle.solid,
                           width: .7
                         ),
                         borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.transparent
+                        color: Colors.transparent,
                       ),
                       child: Icon(
-                        Icons.flash_on,
+                        Icons.hourglass_empty,
                         color: Colors.black.withOpacity(.8),
                         size: 20.0,
                       ),
