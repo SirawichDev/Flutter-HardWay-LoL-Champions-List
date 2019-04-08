@@ -22,7 +22,11 @@ class _MidLaneListState extends State<MidLaneList> {
               SizedBox(
                 width: 25.0,
               ),
-              fetchMidLaneCard('assets/akali.png', '4800', 'Mid Lane', 'Akali')
+              fetchMidLaneCard('assets/akali.png', '4800', 'Mid Lane', 'Akali'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchMidLaneCard('assets/kata.png', '6300', 'Mid Lane', 'Katarina')
             ],
           ),
         )
