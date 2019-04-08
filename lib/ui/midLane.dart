@@ -21,7 +21,8 @@ class _MidLaneListState extends State<MidLaneList> {
               fetchMidLaneCard('assets/zed.png', '6300', 'Mid Lane', 'Zed'),
               SizedBox(
                 width: 25.0,
-              )
+              ),
+              fetchMidLaneCard('assets/akali.png', '4800', 'Mid Lane', 'Akali')
             ],
           ),
         )
@@ -163,8 +164,8 @@ class _MidLaneListState extends State<MidLaneList> {
                               color: Colors.black,
                               style: BorderStyle.solid,
                               width: .7),
-                      borderRadius: BorderRadius.circular(5.0),
-                      color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(5.0),
+                          color: Colors.transparent),
                       child: Icon(
                         Icons.block,
                         color: Colors.black.withOpacity(.8),
@@ -179,10 +180,9 @@ class _MidLaneListState extends State<MidLaneList> {
                       width: 30.0,
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.black,
-                          style: BorderStyle.solid,
-                          width: .7
-                        ),
+                            color: Colors.black,
+                            style: BorderStyle.solid,
+                            width: .7),
                         borderRadius: BorderRadius.circular(5.0),
                         color: Colors.transparent,
                       ),
