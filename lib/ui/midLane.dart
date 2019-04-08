@@ -13,7 +13,7 @@ class _MidLaneListState extends State<MidLaneList> {
     return ListView(
       children: <Widget>[
         Container(
-          height: 350.0,
+          height: 400.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
@@ -26,7 +26,11 @@ class _MidLaneListState extends State<MidLaneList> {
               SizedBox(
                 width: 25.0,
               ),
-              fetchMidLaneCard('assets/kata.png', '6300', 'Mid Lane', 'Katarina')
+              fetchMidLaneCard(
+                  'assets/kata.png', '6300', 'Mid Lane', 'Katarina'),
+              SizedBox(
+                width: 25.0,
+              )
             ],
           ),
         )
@@ -108,7 +112,7 @@ class _MidLaneListState extends State<MidLaneList> {
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontSize: 30.0,
-                                fontWeight: FontWeight.bold))
+                                fontWeight: FontWeight.w700))
                       ],
                     )
                   ],
@@ -199,6 +203,21 @@ class _MidLaneListState extends State<MidLaneList> {
                   ],
                 )
               ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 100.0, top: 337.0),
+          child: Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0), color: Colors.black),
+            child: Center(
+              child: Icon(
+                Icons.dashboard,
+                color: Colors.white,
+              ),
             ),
           ),
         )
