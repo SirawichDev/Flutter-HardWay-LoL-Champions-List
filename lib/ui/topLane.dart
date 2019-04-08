@@ -12,7 +12,7 @@ class _TopLaneListState extends State<TopLaneList> {
   ScrollController _scrollController;
   List allDescribe = [
     'There is no greater symbol of Noxian might than Darius  the nation`s most feared and battle-hardened leader. Rising from humble origins to become the Hand of Noxus',
-' those who stand against the commander of the Trifarian Legion can expect no mercy.',
+    ' those who stand against the commander of the Trifarian Legion can expect no mercy.',
     'he cleaves through the empire`s enemies—many of them Noxi',
   ];
   String description;
@@ -31,7 +31,6 @@ class _TopLaneListState extends State<TopLaneList> {
   changeDesc() {
     var value = _scrollController.offset.round();
     var desIndex = (value / 150).round();
-    print(value);
     setState(() {
       description = allDescribe[desIndex];
     });
@@ -64,7 +63,6 @@ class _TopLaneListState extends State<TopLaneList> {
                 width: 25.0,
               ),
             ],
-
           ),
         ),
         Padding(
@@ -182,7 +180,7 @@ class _TopLaneListState extends State<TopLaneList> {
                 Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(23.0),
                     ),
                     Container(
                         height: 30.0,
