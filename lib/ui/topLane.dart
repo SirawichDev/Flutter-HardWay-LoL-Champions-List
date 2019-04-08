@@ -53,12 +53,12 @@ class _TopLaneListState extends State<TopLaneList> {
                 width: 25.0,
               ),
               fetchTopLaneCard(
-                  'assets/darius3.png', '6300', 'Top Lane', 'Darius'),
+                  'assets/cho.png', '4800', 'Top Lane', 'Cho`gath'),
               SizedBox(
                 width: 25.0,
               ),
               fetchTopLaneCard(
-                  'assets/darius3.png', '6300', 'Top Lane', 'Darius'),
+                  'assets/garen.png', '3600', 'Top Lane', 'Garen'),
               SizedBox(
                 width: 25.0,
               ),
