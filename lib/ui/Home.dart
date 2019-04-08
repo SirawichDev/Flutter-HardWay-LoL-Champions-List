@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './topLane.dart';
-
+import './midLane.dart';
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -113,7 +113,7 @@ class HomePageState extends State<Home> with SingleTickerProviderStateMixin {
             height: MediaQuery.of(context).size.height - 200.0,
             child: TabBarView(controller: tabController, children: <Widget>[
               TopLaneList(),
-              TopLaneList(),
+              MidLaneList(),
               TopLaneList(),
               TopLaneList(),
             ]),
