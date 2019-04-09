@@ -17,7 +17,21 @@ class _SupportListState extends State<SupportList> {
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              fetchSupportCard('assets/zilean.png', '4800', 'Support', 'Zilean')
+              fetchSupportCard(
+                  'assets/zilean.png', '4800', 'Support', 'Zilean'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchSupportCard(
+                  'assets/thresh.png', '6300', 'Support', 'Thresh'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchSupportCard(
+                  'assets/soraka.png', '4800', 'Support', 'Soraka'),
+              SizedBox(
+                width: 25.0,
+              )
             ],
           ),
         )
@@ -53,7 +67,7 @@ class _SupportListState extends State<SupportList> {
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 12.0,
-                              fontWeight: FontWeight.w400,
+                              fontWeight: FontWeight.w600,
                               color: Colors.black),
                         ),
                         Text(
