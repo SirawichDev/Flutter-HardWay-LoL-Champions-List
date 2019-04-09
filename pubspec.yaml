@@ -48,6 +48,8 @@ flutter:
    - varus.png
    - misfor.png
    - zilean.png
+   - thresh.png
+   - soraka.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
