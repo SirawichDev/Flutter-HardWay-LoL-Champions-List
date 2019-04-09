@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './topLane.dart';
 import './midLane.dart';
 import './bottomLane.dart';
+import './supporter.dart';
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -116,7 +117,7 @@ class HomePageState extends State<Home> with SingleTickerProviderStateMixin {
               TopLaneList(),
               MidLaneList(),
               BottomLane(),
-              TopLaneList(),
+              SupportList(),
             ]),
           )
         ],
