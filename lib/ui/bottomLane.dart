@@ -7,6 +7,32 @@ class BottomLane extends StatefulWidget {
 }
 
 class _BotLaneListState extends State<BottomLane> {
+  ScrollController _scrollController;
+  List descriptAll = [
+    'Shauna Vayne is a deadly, remorseless Demacian monster hunter, who has dedicated her life to finding and destroying the demon that murdered her family.',
+    'One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow.',
+    'A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city'
+
+  ];
+  String description;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(changeDesc);
+    setState(() {
+      description = descriptAll[0];
+    });
+  }
+  changeDesc(){
+    var value = _scrollController.offset.round();
+    var desIndex = (value/200).round();
+    setState(() {
+      description=descriptAll[desIndex];
+    });
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -16,6 +42,7 @@ class _BotLaneListState extends State<BottomLane> {
           height: 400.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
+            controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               fetchBotLane('assets/vayne.png', '4800', 'Bot Lane', 'Vayne'),
@@ -31,6 +58,29 @@ class _BotLaneListState extends State<BottomLane> {
                 width: 25.0,
               )
             ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0,top: 1.0),
+          child: Text(
+            'Description',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Montserrat',
+              fontSize: 17.0,
+              color: Colors.black
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0,top: 5.0),
+          child: Text(
+            description,
+            style: TextStyle(
+              fontSize: 12.0,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.w600
+            ),
           ),
         )
       ],
