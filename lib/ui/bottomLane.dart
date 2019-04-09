@@ -18,7 +18,18 @@ class _BotLaneListState extends State<BottomLane> {
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              fetchBotLane('assets/vayne.png', '4800', 'Bot Lane', 'Vayne')
+              fetchBotLane('assets/vayne.png', '4800', 'Bot Lane', 'Vayne'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchBotLane('assets/varus.png', '6300', 'Bot Lane', 'Varus'),
+              SizedBox(
+                width: 25.0,
+              ),
+              fetchBotLane('assets/misfor.png', '4800', 'Bot Lane', 'Miss Fortune '),
+              SizedBox(
+                width: 25.0,
+              )
             ],
           ),
         )
