@@ -7,6 +7,34 @@ class SupportList extends StatefulWidget {
 }
 
 class _SupportListState extends State<SupportList> {
+  ScrollController _scrollController;
+  List descriptionAll = [
+    'In the wastelands of Urtistan, there was once a great city. It perished long ago in a terrible Rune War, like most of the lands below the Great Barrier. ',
+    'Sadistic and cunning, Thresh is an ambitious and restless spirit of the Shadow Isles. ',
+    'A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. '
+  ];
+  String description;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(changeDescript);
+    setState(() {
+      description = descriptionAll[0];
+    });
+  }
+
+  changeDescript() {
+    var value = _scrollController.offset.round();
+    var desIndex = (value / 200).round();
+
+    setState(() {
+      description = descriptionAll[desIndex];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -15,6 +43,7 @@ class _SupportListState extends State<SupportList> {
           height: 400.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
+            controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               fetchSupportCard(
@@ -34,6 +63,20 @@ class _SupportListState extends State<SupportList> {
               )
             ],
           ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0, top: 1.0),
+          child: Text(
+            'Description',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Montserrat',
+                fontSize: 17.0),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0,top: 1.0),
+          child: Text(description,style: TextStyle(fontFamily: 'Montserrat',fontSize: 12.0,fontWeight: FontWeight.w600),),
         )
       ],
     );
