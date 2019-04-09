@@ -63,7 +63,7 @@ class _MidLaneListState extends State<MidLaneList> {
                           height: 5.0,
                         ),
                         Text(
-                          'From',
+                          'Price',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 12.0,
