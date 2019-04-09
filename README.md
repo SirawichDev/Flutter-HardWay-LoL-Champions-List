@@ -1,16 +1,9 @@
-# shop_shop
+# Welcome To LoL Top Champoin Pick Project  <3
+![](previewapp.gif)
 
-A new Flutter project.
 
-## Getting Started
+- git clone https://github.com/SirawichDev/Flutter-LoL-Champions-List
+- run emulator (xcode , android or both ~)
+- enjoy and run <3
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+<h2>THANKS [Sirawich Vounchuy]</h2>
