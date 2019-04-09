@@ -41,7 +41,7 @@ class _TopLaneListState extends State<TopLaneList> {
     return ListView(
       children: <Widget>[
         Container(
-          height: 400.0,
+          height: 390.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
             controller: _scrollController,
@@ -83,7 +83,7 @@ class _TopLaneListState extends State<TopLaneList> {
             style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontFamily: 'Montserrat',
-                fontSize: 13.0),
+                fontSize: 12.0),
           ),
         )
       ],
