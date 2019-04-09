@@ -12,8 +12,8 @@ class _TopLaneListState extends State<TopLaneList> {
   ScrollController _scrollController;
   List allDescribe = [
     'There is no greater symbol of Noxian might than Darius  the nation`s most feared and battle-hardened leader. Rising from humble origins to become the Hand of Noxus',
-    ' those who stand against the commander of the Trifarian Legion can expect no mercy.',
-    'he cleaves through the empire`s enemies—many of them Noxi',
+    'From the moment Cho`Gath first emerged into the harsh light of Runeterra`s sun, the beast was driven by the most pure and insatiable hunger. ',
+    'A proud and noble soldier, Garen fights at the head of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies'
   ];
   String description;
 
@@ -30,7 +30,7 @@ class _TopLaneListState extends State<TopLaneList> {
 
   changeDesc() {
     var value = _scrollController.offset.round();
-    var desIndex = (value / 150).round();
+    var desIndex = (value / 200).round();
     setState(() {
       description = allDescribe[desIndex];
     });
@@ -66,7 +66,7 @@ class _TopLaneListState extends State<TopLaneList> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 25.0, top: 10.0),
+          padding: EdgeInsets.only(left: 25.0, top: 1.0),
           child: Text(
             'Description',
             style: TextStyle(
