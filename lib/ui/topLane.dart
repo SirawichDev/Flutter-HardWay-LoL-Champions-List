@@ -41,7 +41,7 @@ class _TopLaneListState extends State<TopLaneList> {
     return ListView(
       children: <Widget>[
         Container(
-          height: 350.0,
+          height: 400.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
             controller: _scrollController,
@@ -114,7 +114,7 @@ class _TopLaneListState extends State<TopLaneList> {
                           height: 5.0,
                         ),
                         Text(
-                          'From',
+                          'Price',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 12.0,
@@ -272,18 +272,16 @@ class _TopLaneListState extends State<TopLaneList> {
           ),
         ),
         Padding(
-            padding: const EdgeInsets.only(left: 1.0),
+            padding: const EdgeInsets.only(left: 100.0,top: 335.0),
             child: Container(
               height: 50.0,
               width: 50.0,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(25.0),
-                      bottomRight: Radius.circular(25.0)),
+                  borderRadius: BorderRadius.circular(25.0),
                   color: Colors.black),
               child: Center(
                 child: Icon(
-                  Icons.arrow_forward,
+                  Icons.dashboard,
                   color: Colors.white,
                 ),
               ),
