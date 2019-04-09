@@ -8,14 +8,42 @@ class MidLaneList extends StatefulWidget {
 }
 
 class _MidLaneListState extends State<MidLaneList> {
+  ScrollController _scrollController;
+  List allDescribe=[
+    'Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia’s magical '
+        'and martial traditions to drive out Noxian invaders',
+    '`If you look dangerous, you better be dangerous.` - AkaliSquare AkaliAbandoning the Kinkou Order and her title of the Fist of Shadow',
+    'KatarinaSquare KatarinaDecisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau'
+  ];
+  String description;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(changeDesc);
+    setState(() {
+      description = allDescribe[0];
+    });
+  }
+  changeDesc(){
+    var value = _scrollController.offset.round();
+    print(value);
+    var desIndex = (value/200).round();
+    print(desIndex);
+    setState(() {
+      description=allDescribe[desIndex];
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
         Container(
-          height: 400.0,
+          height: 390.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
+            controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               fetchMidLaneCard('assets/zed.png', '6300', 'Mid Lane', 'Zed'),
@@ -32,6 +60,29 @@ class _MidLaneListState extends State<MidLaneList> {
                 width: 25.0,
               )
             ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0,top: 5.0),
+          child: Text(
+            'Description',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Montserrat',
+              fontSize: 17.0,
+              color: Colors.black
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25.0,top: 5.0),
+          child: Text(
+            description,
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Montserrat',
+              fontSize: 12.0
+            ),
           ),
         )
       ],
