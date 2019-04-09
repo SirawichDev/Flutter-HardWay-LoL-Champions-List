@@ -47,7 +47,7 @@ class _BotLaneListState extends State<BottomLane> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              color: Colors.lightBlueAccent,
+              color: Colors.deepPurpleAccent,
             ),
             height: 250.0,
             width: 225.0,
